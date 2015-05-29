@@ -1,0 +1,17 @@
+
+<%= form_for @pack do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :expiration_interval, "Items expire in" %>
+    <%= f.number_field :expiration_interval %> seconds
+  </div>
+  <div class="field">
+    <%= f.label :sched_algo, "Scheduler" %>
+    <%= f.text_field :sched_algo %>
+  </div>
+  <div class="actions"><%= submit_tag "Create Pack" %></div>
+<% end %>
+

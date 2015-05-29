@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyString
+  last_chosen: 2015-05-29 09:54:35
+  weight: 1
+  accepted: false
+
+two:
+  content: MyString
+  last_chosen: 2015-05-29 09:54:35
+  weight: 1
+  accepted: false
