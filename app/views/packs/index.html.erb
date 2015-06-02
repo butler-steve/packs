@@ -2,10 +2,8 @@
 
 <ul>
 
-<% if false %>
-<% for @this_pack in @packs %>
-  <li>@this_pack.name</li>
-<% end%>
+<% @packs.each do |this_pack|  %>
+  <li><%= this_pack.name %></li>
 <% end%>
 </ul>
-<%= link_to "Create a new pack", "/packs/new" %>
+<%= link_to "Create a new pack", "/packs/new", :class => 'button' %>

@@ -40,4 +40,10 @@ gem 'debugger', group: [:development, :test]
 
 gem 'sorcery'
 gem 'angularjs-rails'
+gem 'better_errors', group: [:development]
+gem 'binding_of_caller', group: [:development]
 
+gem 'pry', group: [:development]
+gem 'pry-doc', group: [:development]
+gem 'pry-remote', group: [:development]
+gem 'pry-nav', group: [:development]

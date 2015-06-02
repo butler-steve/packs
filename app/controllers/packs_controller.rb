@@ -1,4 +1,4 @@
-class PacksController < ApplicationController
+class PacksController < BaseController
   before_filter :require_login
 
   def new
@@ -6,9 +6,11 @@ class PacksController < ApplicationController
   end
 
   def create
-    @pack = Pack.new pack_params
+    @pack = current_user.packs.new pack_params
     if @pack.save
       redirect_to root_url, :notice => "Pack '#{@pack.name}' was created."
+    else
+      redirect_to new_pack_path, :notice => "Can't create the pack: " + @pack.errors.messages.values.join(" ")
     end
   end
 

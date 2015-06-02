@@ -1,4 +1,5 @@
-class UsersController < ApplicationController
+class UsersController < BaseController
+  skip_before_filter :require_login, :only => [:new, :create]
   def new
     @user = User.new
   end
@@ -8,6 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to root_url, :notice => "Account successfully created."
     else
+      flash.now.alert = "Can't create the account: " + @user.errors.messages.values.join(" ")
       render :new
     end
   end

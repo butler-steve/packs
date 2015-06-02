@@ -1,5 +1,5 @@
 class Pack < ActiveRecord::Base
-  belongs_to :user, class_name: 'User', foreign_key: 'user_id'
+  belongs_to :user
   has_many :items
 
   validates_presence_of :name, :on => :create
