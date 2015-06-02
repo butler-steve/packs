@@ -1,0 +1,17 @@
+
+<h1>Pack '<%= @pack.name %>' contents </h1>
+<%= form_for @items.new, :url => {:action => :create, :controller => :items} do |f| %>
+  <span class="field">
+    <%= f.text_field :content %>
+  </span>
+  <span class="field">
+    <%= f.number_field :weight %>
+  </span>
+  <div class="actions"><%= submit_tag "Add Item", :class => 'button' %></div>
+<% end %>
+<ul>
+<% @items.each do |this_item| %>
+  <li><%= this_item.content %> </li>
+<% end %>
+<%= link_to "My Packs", "/packs.html", :class => 'button' %>
+</ul>

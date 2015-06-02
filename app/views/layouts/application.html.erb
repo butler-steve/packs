@@ -21,7 +21,7 @@
         <div class="nav_error"><%= content_tag :div, msg, :id => "flash_#{name}" %> </div>
       <% end %>
     </div>
-   <div class="content">
+   <div class="content" ng-app="packsApp">
       <%= yield %>
     </div>
   </div>

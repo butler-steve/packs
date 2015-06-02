@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
+  get 'items/index'
+
+  get 'items/create'
+
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
   resources :users
+  resources :packs do
+    resources :items
+  end
   resources :sessions
-  resources :packs
   root :to => "home#index"
 
   # The priority is based upon order of creation: first created -> highest priority.

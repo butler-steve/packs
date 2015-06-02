@@ -22,6 +22,11 @@ class PacksController < BaseController
 
   def index
     @packs = current_user.packs
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @packs }
+    end
   end
 
   def show

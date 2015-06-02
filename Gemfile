@@ -40,6 +40,7 @@ gem 'debugger', group: [:development, :test]
 
 gem 'sorcery'
 gem 'angularjs-rails'
+gem 'foundation-rails'
 gem 'better_errors', group: [:development]
 gem 'binding_of_caller', group: [:development]
 

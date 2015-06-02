@@ -7,7 +7,7 @@ class SessionsController < BaseController
   def create
     user = login(params[:email], params[:password], params[:remember_me])
     if user
-      redirect_to packs_path(user)
+      redirect_to "/packs.html"
     else
       flash.now.alert = "Login information is not valid."
       render :new

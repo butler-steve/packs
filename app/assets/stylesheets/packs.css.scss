@@ -1,3 +1,25 @@
 // Place all the styles related to the packs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.packs-table {
+  width: 100%;
+  margin: 10px;
+}
+
+.packs-col {
+  width: 33%;
+  border: 1px;
+  border-style: solid;
+  padding: 5px 0 5px 0;
+}
+
+.pack-name {
+  background: #337D70;
+  color: white;
+  padding: 5px;
+}
+
+.pack-edit-link {
+  font-size: 70%;
+  margin: 3px;
+}

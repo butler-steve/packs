@@ -1,0 +1,12 @@
+
+<table class="packs-table">
+  <tr ng-repeat="this_row in rows track by $index" class="packs-row">
+    <td ng-repeat="this_pack in rows[$index]" class="packs-col">
+      <div class="pack">
+        <span class="pack-name">{{this_pack.name}}<a class="pack-edit-link" href="/packs/{{this_pack.id}}/items">(add items)</a></span>
+        <span class="pack-leader"></span>
+      </div> 
+    </td> 
+  </tr> 
+</table>
+

@@ -1,9 +1,5 @@
 <h1>My Packs</h1>
 
-<ul>
+<div ng-view></div>
 
-<% @packs.each do |this_pack|  %>
-  <li><%= this_pack.name %></li>
-<% end%>
-</ul>
 <%= link_to "Create a new pack", "/packs/new", :class => 'button' %>
